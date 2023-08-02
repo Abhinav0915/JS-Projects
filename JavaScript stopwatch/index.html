@@ -4,16 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Stopwatch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <style>
+        html, body {
+            height: 100%; /* Set the height to 100% to ensure the background covers the entire viewport */
+            margin: 0; /* Remove any default margin */
+            padding: 0; /* Remove any default padding */
+            background-color: #264653; /* Set the background color for the entire page */
+            overflow: hidden;
+        }
+        
+    </style>
+
 </head>
 <body>
-    <h2>Stopwatch</h2>
-    <div>
-        <span id="seconds">00</span>:<span id="tens">00</span>
-    </div>
-    <br>
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
-    <button id="reset">Reset</button>
+    <section class="section">
+       <div class="container">
+        <div class="columns">
+            <div class="column is-half is-offset-one-quarter">
+                <div class="card ">
+                    <div class="card-image">
+                        <figure class="image is-2by1 ">
+                            <img src="https://media.istockphoto.com/id/1269816444/video/24-hours-digital-clock-animation-you-can-stop-at-the-beginning-of-every-hour-simple-led.jpg?s=640x640&k=20&c=uwja7lOHVeEm64AgvCqhaph1QWI_uARRzQewYunpw3U=" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="content has-text-centered is-size-1 has-text-weight-semibold ">
+                      JavaScript Stopwatch
+                      <div>
+                        <span id="seconds">00</span>:<span id="tens">00</span>
+                    </div>
+                      </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button id="start"  class="is-primary button card-footer-item is-large">Start</button>
+                        <button id="pause"  class="button is-warning button card-footer-item is-large">Pause</button>
+                        <button id="reset"  class="button is-danger button card-footer-item is-large">Reset</button>
+                    </footer>
+                  </div>
+            </div>
+        </div>
+       </div>
+    </section>
+    
 
     <script src="app.js"></script>
 </body>

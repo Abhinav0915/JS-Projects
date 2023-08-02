@@ -30,6 +30,7 @@ function startTimer() {
 }
 
 startButton.addEventListener('click', function (){
+    clearInterval(Interval)
     Interval = setInterval(startTimer, 10);
 
 })
