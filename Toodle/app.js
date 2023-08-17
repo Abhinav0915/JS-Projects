@@ -40,10 +40,10 @@ app.get('/home',(req,res) => {
 //Creating a new task
 app.get('/addtask' , async (req,res) => {
     const newTask = new allTasks({
-        task: 'Do homework',
-        dueDays: '1 Day',
-        time: '10 AM',
-        status: 'Done'
+        task: 'Get Grocery',
+        dueDays: '3 Day',
+        time: '1 PM',
+        status: 'Pending'
     });
     await newTask.save()
     res.send("Added!!")})
@@ -51,6 +51,6 @@ app.get('/addtask' , async (req,res) => {
 //Reading all the tasks
 app.get('/readtask' , async (req,res) => {
     const tasks = await allTasks.find({})
-    res.render('viewAllTask',{newTask})
+    res.render('viewAllTask',{tasks})
 }
 )

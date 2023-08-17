@@ -7,6 +7,15 @@
 </head>
 <body>
     <h1>All Tasks</h1>
+    <ul>
+        <% for (let i = 0; i < tasks.length; i++) { %>
+            <li>
+                <a href="/task/<%= tasks[i].id %>">
+                    <%= tasks[i].task %>
+                </a>
+            </li>
+        <% } %>
+    </ul>
    
        
 </body>
