@@ -1,11 +1,14 @@
-//Importing all libraries
-const express = require('express');
-const path = require('path');
-const mongoose = require('mongoose');
-const app = express();
-const allTasks = require('./models/addTask');
+const express = require('express')
+const app = express()
+const mongoose = require('mongoose')
+const path = require('path')
 
-//Including Mongoose
+//Listening at Port
+app.listen(3000, () => {
+  console.log('Server is Live at port 3000')
+});
+
+//MongoDB connection
 async function main() {
   try {
     await mongoose.connect('mongodb://127.0.0.1:27017/Toodle',{
@@ -20,37 +23,23 @@ async function main() {
 mongoose.set('strictQuery', false);
 main().catch(err => console.log(err));
 
-
-//Setting up the view engine
+//Setting up view engine
 app.set('views',path.join(__dirname,'views'));  
 app.set('view engine','ejs')
 
-//Setting up the static files
+//Setting up static files
 app.use(express.static(path.join(__dirname,'public')))
 
-//Setting up the routes
-app.listen(3000, () => {
-    console.log('Server is now running at port 3000');
-})
+//Adding Routes
 
-//Home Page
-app.get('/home',(req,res) => {
+//Homepage Route
+app.get('/', (req,res) => {
     res.render('homepage')
-})
-//Creating a new task
-app.get('/addtask' , async (req,res) => {
-    const newTask = new allTasks({
-        task: 'Get Grocery',
-        dueDays: '3 Day',
-        time: '1 PM',
-        status: 'Pending'
-    });
-    await newTask.save()
-    res.send("Added!!")})
+});
 
-//Reading all the tasks
-app.get('/readtask' , async (req,res) => {
-    const tasks = await allTasks.find({})
-    res.render('viewAllTask',{tasks})
-}
-)
+//Add Task
+app.get('/addTask', (req,res) => {
+    res.render('addTask')
+});
+
+
