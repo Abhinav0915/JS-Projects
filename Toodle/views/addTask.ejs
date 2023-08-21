@@ -14,7 +14,7 @@
           <h5 class="card-title text-center my-3">Enter Details to add a Task</h5>
          
           
-    <form>
+    <form action="/home" method="post">
         <div class="mb-3 ">
           <label for="taskTitle" class="form-label">Title<Title></Title></label>
           <input type="text" class="form-control" id="taskTitle">
@@ -32,25 +32,11 @@
             <input type="text" class="form-control" id="status">
         </div>
         <div class="d-grid gap-2">
-            <button class="btn btn-success my-3 mx-5" type="button">Add Task</button>
+            <button class="btn btn-success my-3 mx-5" type="submit">Add Task</button>
         </div>
     </form>
-
-<!--     
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a> -->
         </div>
       </div>
-    <!-- <form action="" method="post">
-        <label for="newTask">Add a Task</label>
-        <input type="text" name="task" id="task" placeholder="Enter Task">
-        <p></p>
-        <label for="taskDescription">Add a Description</label>
-        <textarea name="taskDescription" id="taskDescription" cols="30" rows="5"></textarea>
-
-
-        <input type="submit" value="Add Task">
-    </form> -->
 
 </body>
 </html>
