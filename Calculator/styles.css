@@ -8,13 +8,45 @@ h1{
     display: block;
     margin: auto;
     flex-direction: column;
-    height: 30rem;
-    width: 25rem;
+    height: 28rem;
+    width: 20rem;
     border: 1px solid black;
+    border-radius: 20px;
+    
+    
 }
 #resultField{
     height: 3.5rem;
     width: 98%;
     text-align: right;
     font-size: 2rem;
+    border: 0;
+    border-radius: 20px;
+    margin-bottom: 12px;
 }
+#resultField:focus{
+    outline: none;
+}
+.methodsRow1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.buttonStyle {
+    height: 3.6rem;
+    width: 3.7rem;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+}
+
+.buttonStyle:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+#equals{}
