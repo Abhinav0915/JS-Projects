@@ -3,6 +3,7 @@ h1{
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    user-select: none;
 }
 .container{
     display: block;
@@ -12,7 +13,7 @@ h1{
     width: 20rem;
     border: 1px solid black;
     border-radius: 20px;
-    
+    user-select: none;  
     
 }
 #resultField{
@@ -27,7 +28,7 @@ h1{
 #resultField:focus{
     outline: none;
 }
-.methodsRow1{
+.methodsRow{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
