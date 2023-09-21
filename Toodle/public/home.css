@@ -1,0 +1,26 @@
+body{
+    background-color: #14213d;
+    padding: 15px 20px 15px 20px; 
+}
+h1{
+    color: white;
+    font-family: Orbitron;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.container{
+    margin: auto;
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    border-radius: 10px;
+  
+}
+.container-heading{
+    height: 40px;
+    padding-top : 20px;
+    background-color: #fca311;
+    display: flex;
+    justify-content: center;
+}
