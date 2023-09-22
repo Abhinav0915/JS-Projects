@@ -11,16 +11,63 @@ h1{
 }
 .container{
     margin: auto;
-    height: 600px;
-    width: 600px;
-    background-color: white;
+    height: 400px;
+    width: 550px;
+    background-color: wheat;
     border-radius: 10px;
   
 }
 .container-heading{
     height: 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     padding-top : 20px;
     background-color: #fca311;
     display: flex;
     justify-content: center;
+}
+.container-inputField {
+    padding-left: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    margin: 0 auto 30px; 
+}
+.container-inputField:hover {
+    border-color: #fca311;
+}
+
+.container-addButton{
+    margin: auto;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #fca311;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.newTaskButton{
+    margin: auto;
+    height: 30px;
+    width: 80%;
+    border-radius: 10px;
+    background-color: #fca311;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    align-self: baseline;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
 }

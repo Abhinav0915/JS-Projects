@@ -10,11 +10,16 @@
     <title>HomePage</title>
 </head>
 <body>
-    <h1>Toodle - Add Your Tasks</h1>
+    <h1>Toodle - View Tasks</h1>
     <div class="container">
-        <h3 class="container-heading">Add Task</h3>
-        
-        
+        <h3 class="container-heading">All Task</h3>
+        <ul>
+            <% for(var i=0; i<toodle.length; i++) { %>
+                <li><%= toodle[i].task %></li>
+            <% } %>
+        </ul>
+        <a href="/addTask"><button class="newTaskButton">Add New Task</button></a>
     </div>
+    <script src="addTask.ejs"></script>
 </body>
 </html>

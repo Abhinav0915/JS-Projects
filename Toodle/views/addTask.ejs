@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="addTask.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Toodle - Add Your Tasks</h1>
+    <div class="container">
+        <h3 class="container-heading">Add Task</h3>
+        <form action="/addNewTask" method="POST">
+            <input type="text" class="container-inputField" name="task" placeholder="Enter Task" required><br>
+            <input type="submit" class="container-addButton" value="Add Task">
+        </form>
+    </div>
+    <script src="addTask.ejs"></script>
+</body>
+</html>
